@@ -1,7 +1,6 @@
 import { createDatabaseConnectionPool } from "../db/connect"
 import { Request, Response} from 'express';
 
-
 const pool = createDatabaseConnectionPool();
 
 export const getUsers = async (req: Request, res: Response) => {

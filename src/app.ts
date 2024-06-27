@@ -4,6 +4,7 @@ import usersRoutes from './routes/usersRoutes'
 
 const app: Express = express();
 
+app.use(express.json());
 app.use('/api/v1', usersRoutes);
 
 app.use((err: Error, req: Request, res: Response, next: NextFunction) => {

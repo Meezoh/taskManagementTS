@@ -15,6 +15,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
 const usersRoutes_1 = __importDefault(require("./routes/usersRoutes"));
 const app = (0, express_1.default)();
+app.use(express_1.default.json());
 app.use('/api/v1', usersRoutes_1.default);
 app.use((err, req, res, next) => {
     console.error(err.stack);
