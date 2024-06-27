@@ -1,6 +1,6 @@
 import express, { Express, Request, Response, NextFunction } from 'express';
 import usersRoutes from './routes/usersRoutes'
-// import { createTables } from './db/createTables';
+import { createTables } from './db/createTables';
 
 const app: Express = express();
 
@@ -12,13 +12,13 @@ app.use((err: Error, req: Request, res: Response, next: NextFunction) => {
     res.status(500).send('Something broke!');
 });
 
-const port = 8080;
+const port = process.env.PORT || 9090;
 const start = async () => {
     try {
         app.listen(port, () => {
             console.log(`Server is running on port ${port}`);
         });
-        // createTables();
+        createTables();
     } catch (error) {
         console.log(error);
     }

@@ -12,7 +12,7 @@ export const generateJWToken = (userId: number, email: string) => {
             email
         };
 
-        const token = jwt.sign(user, myTokenKey, {
+        const token: string = jwt.sign(user, myTokenKey, {
             expiresIn: '30d',
           });
         return token;

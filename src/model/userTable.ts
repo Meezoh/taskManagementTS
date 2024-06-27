@@ -17,7 +17,7 @@ export const userTable = async () => {
         `);
         console.log('users table created successfully');
 
-    } catch (error) {
-        console.log('Error creating users table', error);
+    } catch (error: any) {
+        console.log('Error creating users table', error.message);
     }
 }
