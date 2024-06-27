@@ -1,7 +1,7 @@
 import { createDatabaseConnectionPool } from "../db/connect"
 import { Request, Response} from 'express';
 import { hash } from 'bcrypt';
-
+// import { generateJWToken } from "../middlewares/generateJWToken";
 
 interface UserBody {
     username: string,
